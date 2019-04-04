@@ -4,10 +4,16 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/oneFragment">
 
-    <fragment android:id="@+id/oneFragment" android:name="demo.rlv.cehome.com.navigationcomponents.OneFragment"
+    <tab_fragment android:id="@+id/oneFragment" android:name="demo.rlv.cehome.com.navigationcomponents.OneFragment"
               android:label="fragment_one" tools:layout="@layout/fragment_one">
         <action android:id="@+id/action_oneFragment_to_twoFragment" app:destination="@id/twoFragment"/>
-    </fragment>
-    <fragment android:id="@+id/twoFragment" android:name="demo.rlv.cehome.com.navigationcomponents.TwoFragment"
-              android:label="fragment_two" tools:layout="@layout/fragment_two"/>
+    </tab_fragment>
+    <tab_fragment android:id="@+id/twoFragment" android:name="demo.rlv.cehome.com.navigationcomponents.TwoFragment"
+              android:label="fragment_two" tools:layout="@layout/fragment_two">
+        <action android:id="@+id/action_twoFragment_to_fragment_three" app:destination="@id/fragment_three"/>
+    </tab_fragment>
+    <tab_fragment android:id="@+id/fragment_three" android:name="demo.rlv.cehome.com.navigationcomponents.ThreeFragment"
+              android:label="fragment_fragment_three" tools:layout="@layout/fragment_three">
+        <action android:id="@+id/action_fragment_three_to_oneFragment" app:destination="@id/oneFragment"/>
+    </tab_fragment>
 </navigation>

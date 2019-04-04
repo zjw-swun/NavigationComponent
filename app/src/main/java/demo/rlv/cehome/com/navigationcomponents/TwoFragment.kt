@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_two.*
 
 
 /**
@@ -22,13 +25,14 @@ class TwoFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_two, container, false)
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        view?.findViewById<Button>(R.id.button_two)?.setOnClickListener {
-//            view?.let { Navigation.findNavController(it).navigate(R.id.action_twoFragment_to_oneFragment)
-//            }
-//        }
-//    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        button_one.text = "${button_one.text}+${this}"
+        view?.findViewById<Button>(R.id.button_one)?.setOnClickListener {
+            view?.let { Navigation.findNavController(it).navigate(R.id.action_twoFragment_to_fragment_three)
+            }
+        }
+    }
 
 
 }

@@ -3,8 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".OneFragment">
-
+             tools:context=".ThreeFragment">
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -14,14 +13,14 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
-                android:text="GO TO TWO"
+                android:text="GO TO one"
                 android:id="@+id/button_one"/>
 
         <android.support.v7.widget.AppCompatEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="This Is 1 Fragment"/>
+                android:text="This Is 3 Fragment"/>
     </RelativeLayout>
 
 </FrameLayout>

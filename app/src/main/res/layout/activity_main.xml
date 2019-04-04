@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/my_nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:name="demo.rlv.cehome.com.navigationcomponents.TabNavHostFragment"
             app:navGraph="@navigation/nav_graph"
             app:defaultNavHost="true"
     />
